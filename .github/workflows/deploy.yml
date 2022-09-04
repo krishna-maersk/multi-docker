@@ -21,8 +21,8 @@ jobs:
       - run: docker push dappilik/multi-server
       - run: docker push dappilik/multi-worker
 
-#      - name: Generate deployment package
-#        run: zip -r deploy.zip . -x '*.git*'
+      - name: Generate deployment package
+        run: zip -r deploy.zip . -x '*.git*'
 
       - name: Deploy to EB
         uses: einaregilsson/beanstalk-deploy@v20
@@ -34,4 +34,4 @@ jobs:
           existing_bucket_name: elasticbeanstalk-us-east-2-520597075946
           region: us-east-2
           version_label: ${{ github.sha }}
-#          deployment_package: deploy.zip
+          deployment_package: deploy.zip
