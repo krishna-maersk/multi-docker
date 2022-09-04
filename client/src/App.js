@@ -9,7 +9,7 @@ function App() {
     return (
         <Router>
             <div className="App">
-                <header className="App-header" style={{minHeight: "50vh", marginBottom:"5vh"}}>
+                <header className="App-header" style={{minHeight: "50vh", marginBottom:"5vh", color:"whitesmoke"}}>
                     {/*<img src={logo} className="App-logo" alt="logo"/>*/}
                     {/*<a*/}
                     {/*    className="App-link"*/}
@@ -19,8 +19,9 @@ function App() {
                     {/*>*/}
                     {/*    Learn React*/}
                     {/*</a>*/}
-                    <Link to="/">Home</Link>
-                    <Link to="/OtherPage">Other Page</Link>
+                    <p>Fib Calculator</p>
+                    <Link to="/" style={{color:"burlywood"}}>Home</Link>
+                    <Link to="/OtherPage" style={{color:"burlywood"}}>Other Page</Link>
                 </header>
                 <div>
                     <Routes>
