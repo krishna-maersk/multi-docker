@@ -32,7 +32,10 @@ class Fib extends Component {
     }
 
     renderSeenIndexes() {
-        return this.state.seenIndexes?.map(({number}) => number).join(", ")
+        console.log("is seenIndexes array: ", Array.isArray(this.state.seenIndexes))
+        if(Array.isArray(this.state.seenIndexes)){
+            return this.state.seenIndexes?.map(({number}) => number).join(", ")
+        }
     }
 
     renderValues() {
@@ -42,7 +45,6 @@ class Fib extends Component {
                 <div key={key}> For Index {key} I calculated {this.state.values[key]} </div>
             )
         }
-
         return entries;
     }
 
